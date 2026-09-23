@@ -20,4 +20,4 @@ def health() -> dict[str, str]:
 @app.get("/goodbye")
 def goodbye() -> dict[str, str]:
     """Return a static farewell."""
-    return {"message": "Goodbye, world!"}
+    return {"message": "Goodbye, world!!"}

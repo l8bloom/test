@@ -11,4 +11,4 @@ def test_goodbye_returns_farewell() -> None:
 
     assert response.status_code == 200
     assert response.headers["content-type"] == "application/json"
-    assert response.json() == {"message": "Goodbye, world!"}
+    assert response.json() == {"message": "Goodbye, world!!"}

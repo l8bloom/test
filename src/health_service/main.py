@@ -21,3 +21,9 @@ def health() -> dict[str, str]:
 def goodbye() -> dict[str, str]:
     """Return a static farewell."""
     return {"message": "Goodbye, world!"}
+
+
+@app.get("/ping")
+def ping() -> dict[str, str]:
+    """Answer a liveness probe with a static reply."""
+    return {"message": "pong"}

@@ -5,6 +5,12 @@ from fastapi import FastAPI
 app = FastAPI(title="Health service")
 
 
+@app.get("/dummy")
+def dummy() -> dict[str, str]:
+    """Return a static response for connector and deployment checks."""
+    return {"message": "dummy"}
+
+
 @app.get("/hello")
 def hello() -> dict[str, str]:
     """Return a static greeting."""

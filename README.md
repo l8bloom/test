@@ -30,3 +30,6 @@ uvicorn health_service.main:app --host 0.0.0.0 --port 8000
 ```
 
 The health endpoint is available at `http://localhost:8000/health`.
+
+`GET /temperatures` returns fixed mock Celsius values for ten European capitals.
+The response identifies its source as `mock`; it does not report live weather.

@@ -18,7 +18,7 @@ CAPITAL_TEMPERATURES = [
 ]
 
 
-@app.get("/mock/temperatures")
+@app.get("/temperatures")
 def european_capital_temperatures() -> dict[str, object]:
     """Return fixed mock Celsius temperatures for ten European capitals."""
     return {"source": "mock", "temperatures": CAPITAL_TEMPERATURES}

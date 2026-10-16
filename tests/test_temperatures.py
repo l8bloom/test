@@ -5,7 +5,7 @@ from health_service.main import app
 
 
 client = TestClient(app)
-PATH = "/mock/temperatures"
+PATH = "/temperatures"
 EXPECTED_CAPITALS = [
     {"city": "London", "country": "United Kingdom", "temperatureC": 12},
     {"city": "Paris", "country": "France", "temperatureC": 14},

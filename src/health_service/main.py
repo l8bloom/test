@@ -5,23 +5,23 @@ from fastapi import FastAPI
 app = FastAPI(title="Health service")
 
 CAPITAL_TEMPERATURES = [
-    {"city": "Amsterdam", "country": "Netherlands", "temperatureC": 12},
-    {"city": "Berlin", "country": "Germany", "temperatureC": 11},
-    {"city": "Copenhagen", "country": "Denmark", "temperatureC": 9},
-    {"city": "London", "country": "United Kingdom", "temperatureC": 13},
-    {"city": "Madrid", "country": "Spain", "temperatureC": 21},
-    {"city": "Oslo", "country": "Norway", "temperatureC": 6},
+    {"city": "London", "country": "United Kingdom", "temperatureC": 12},
     {"city": "Paris", "country": "France", "temperatureC": 14},
-    {"city": "Prague", "country": "Czechia", "temperatureC": 10},
-    {"city": "Rome", "country": "Italy", "temperatureC": 19},
-    {"city": "Vienna", "country": "Austria", "temperatureC": 12},
+    {"city": "Berlin", "country": "Germany", "temperatureC": 10},
+    {"city": "Rome", "country": "Italy", "temperatureC": 20},
+    {"city": "Madrid", "country": "Spain", "temperatureC": 22},
+    {"city": "Lisbon", "country": "Portugal", "temperatureC": 18},
+    {"city": "Amsterdam", "country": "Netherlands", "temperatureC": 11},
+    {"city": "Brussels", "country": "Belgium", "temperatureC": 12},
+    {"city": "Vienna", "country": "Austria", "temperatureC": 13},
+    {"city": "Prague", "country": "Czechia", "temperatureC": 9},
 ]
 
 
-@app.get("/temperatures/european-capitals")
+@app.get("/mock/temperatures")
 def european_capital_temperatures() -> dict[str, object]:
     """Return fixed mock Celsius temperatures for ten European capitals."""
-    return {"source": "mock", "unit": "celsius", "capitals": CAPITAL_TEMPERATURES}
+    return {"source": "mock", "temperatures": CAPITAL_TEMPERATURES}
 
 
 @app.get("/hello")

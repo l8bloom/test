@@ -30,3 +30,6 @@ uvicorn health_service.main:app --host 0.0.0.0 --port 8000
 ```
 
 The health endpoint is available at `http://localhost:8000/health`.
+
+`GET /shout?text=hi` runs the text through a two-node LangGraph graph and
+returns it uppercased with three exclamation marks: `{"message": "HI!!!"}`.

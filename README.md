@@ -1,6 +1,6 @@
 # Health service
 
-A minimal FastAPI service with a process health endpoint.
+A minimal FastAPI service with a process health endpoint at `GET /health`.
 
 ## Requirements
 

@@ -30,3 +30,4 @@ uvicorn health_service.main:app --host 0.0.0.0 --port 8000
 ```
 
 The health endpoint is available at `http://localhost:8000/health`.
+New line for branch cr-966-cloud-check
